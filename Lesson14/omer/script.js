@@ -233,5 +233,5 @@ let a1 = 2;
 let b1 = 3; 
 
 const incrementeda1 = ++a1;
-const sumUp = a1 + b1;
-console.log("Ex.27","The aggregate numbers is:", sumUp);
+const sum = a1 + b1;
+console.log("Ex.27","The aggregate numbers is:", sum);
