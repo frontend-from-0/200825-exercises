@@ -57,8 +57,16 @@ console.log(
 );
 
 // 7. Concatenate "Hello" and "World" with a space in between and log the result.
+const str1 = 'Hello';
+const str2 = 'World';
+const combined = str1 + ' ' + str2;
+console.log('Ex. 7:', combined);
 
 // 8. Check the type of a variable, e.g., let x = 42. Log the type using typeof.
+let x = 42;
+console.log('Ex. 8:', 'Type of x (42):', typeof x);
+let y = 'JavaScript';
+console.log('Ex. 8:', 'Type of y (JavaScript):', typeof y);
 
 // 9. Convert the number 100 to a string and log the result.
 const number = 100;
@@ -94,7 +102,7 @@ console.log('Ex. 12:', '3.7 (floor):', Math.floor(numberDown));
 console.log('Ex. 12:', '3.2 (ceil):', Math.ceil(numberUp));
 
 // 13. Declare a boolean variable isStudent = true. Log it.
-let isStudent = true;
+const isStudent = true;
 console.log('Ex. 13:', 'isStudent:', isStudent, 'Type:', typeof isStudent);
 
 // 14. Initialize counter = 0, then increment it by 1 using counter++ and log it.
@@ -171,13 +179,13 @@ console.log('Ex. 23:', 'New Temperature:', initialTemperature);
 
 // 24. Declare numberEx9=6. Increment it using the prefix ++ operator and log both the variable and the incremented value.
 let numberEx24 = 6;
-let prefixedValue = ++numberEx24; 
+const prefixedValue = ++numberEx24; 
 console.log('Ex. 24:', 'Prefix incremented value (++numberEx24):', prefixedValue);
 console.log('Ex. 24:', 'Current numberEx24 value:', numberEx24);
 
 // 25. Declare numberEx10=8. Increment it using the postfix ++ operator and log both the original variable and the incremented value.
 let numberEx25 = 8;
-let postfixedValue = numberEx25++;
+const postfixedValue = numberEx25++;
 console.log('Ex. 25:', 'Postfix original value (numberEx25++):', postfixedValue); 
 console.log('Ex. 25:', 'Current numberEx25 value:', numberEx25);
 
