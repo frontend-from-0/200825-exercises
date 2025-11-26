@@ -64,7 +64,7 @@ console.log("Ex.7", firstWord + " " + secondWord)
 
 // 8. Check the type of a variable, e.g., let x = 42. Log the type using typeof.
 
-let x = 42; 
+const x = 42; 
 console.log("Ex.8", "Type of x is:", typeof x);
 
 // 9. Convert the number 100 to a string and log the result.
@@ -128,9 +128,9 @@ console.log("Ex.15", "10+5:", points);
 
 // 16. Declare name="Alice", age=30, city="Paris". Log "Alice (30) lives in Paris" using template literals.
 
-const costumerName = "Alice";
-const costumerAge = "30";
-const costumerCity = "Paris";
+const customerName = "Alice";
+const customerAge = "30";
+const customerCity = "Paris";
 console.log("Ex.16", `${costumerName} (${costumerAge}) lives in ${costumerCity}`);
 
 
@@ -157,8 +157,8 @@ console.log("Ex.18", "division of numbers is:", divisionResult, "difference of n
 
 // 19. Declare firstName and lastName. Create fullName by concatenating them with a space and log it.
 
-let firstName = "John" ;
-let lastName = "Duran";
+const firstName = "John" ;
+const lastName = "Duran";
 
 const fullName = firstName + " "+ lastName;
 console.log("Ex.19", "Full name is:", fullName );
@@ -213,7 +213,7 @@ console.log(numberEx9);
 
 let numberEx10 = 8
 
-incrementedValue= numberEx10++ 
+const incrementedValue= numberEx10++ 
 
 console.log("Ex.25", "Incremented value is:", incrementedValue);
 
@@ -230,7 +230,7 @@ console.log("Ex.26", "Final value is:", finalValue);
 // 27. Declare a=2 and b=3. Increment a using the prefix ++ operator, then add b to the result and log it.
 
 let a1 = 2;
-let b1 = 3; 
+const b1 = 3; 
 
 const incrementeda1 = ++a1;
 const sum = a1 + b1;
