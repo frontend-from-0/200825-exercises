@@ -512,7 +512,7 @@ console.log('Ex. 23');
 function getInitials(fullName) {
   const parts = fullName.split(' ');
   let initials = '';
-  for (let part of parts) {
+  for (const part of parts) {
     initials += part.charAt(0).toUpperCase() + '.';
   }
   console.log(initials);
