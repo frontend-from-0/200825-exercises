@@ -295,3 +295,7 @@ const todoList = ['Study JS', 'Eat breakfast', 'Walk dog'];
 
 
 //öğreniyorum
+
+function cihanLearnGit (number) {
+  console.log("Cihan has learned :)");
+}
