@@ -769,3 +769,5 @@ calculate(30, '-', 8);
 calculate(30, '*', 8);
 calculate(30, '/', 6);
 calculate(30, 'a', 8);
+
+console.log('-------');
