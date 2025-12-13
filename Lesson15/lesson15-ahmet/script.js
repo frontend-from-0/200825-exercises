@@ -749,18 +749,17 @@ function calculate(a, operator, b) {
     case '+':
       console.log(a + b);
       break;
-      case '-':
-        console.log(a - b);
-        break;
-        case '*':
-          console.log(a * b);
-          break;
-          case '/':
-            console.log(a / b);
-            break;
-
-            default:
-              console.log('Invalid operator');
+    case '-':
+      console.log(a - b);
+      break;
+    case '*':
+      console.log(a * b);
+      break;
+    case '/':
+      console.log(a / b);
+      break;
+    default:
+      console.log('Invalid operator');
   }
 }
 
