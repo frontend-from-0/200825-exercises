@@ -270,17 +270,7 @@ function searchContact(name, phone, email) {
       
     }
     console.log(`Are you looking for:`, contact)
-      count++
-
-    
-
-    
-  
-
-
-  
-
-  
+      count++ 
 }
 if (count === 0) {
     console.log(`No contact found by ${searchBy.join(' and ')} which ${Object.values(searchObject).join(' and ')}`);
@@ -294,3 +284,16 @@ searchContact('John');
 searchContact('John', '123 456 12 34');
 searchContact('John', undefined, 'john@gmail.com');
 searchContact(undefined, '123 456 12 34', 'john@gmail.com');
+
+
+
+
+function sortContactsAlphabetic(){
+  console.log('Sorting...')
+  contacts.sort(function(a,b){
+    return a.name.localeCompare(b.name, 'en')
+  })
+}
+
+sortContactsAlphabetic()
+displayAllContacts()
