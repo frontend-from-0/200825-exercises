@@ -7,24 +7,24 @@
    - Call the function with different passwords and log the result.
 */
 
-console.log('Ex. 1');
+console.log("Ex. 1");
 
 function checkPassword(password) {
   if (password.length >= 8) {
-    console.log('Password length is sufficient.');
+    console.log("Password length is sufficient.");
   } else {
-    console.log('Password is too short.');
+    console.log("Password is too short.");
   }
 }
 
-const password = 'abcdefg';
+const password = "abcdefg";
 checkPassword(password);
 
-checkPassword('asdadasdasdas');
-checkPassword('ababbabab');
-checkPassword('aarararatagaaghag');
+checkPassword("asdadasdasdas");
+checkPassword("ababbabab");
+checkPassword("aarararatagaaghag");
 
-console.log('-------');
+console.log("-------");
 
 /*
 2. Uppercase Name
@@ -33,16 +33,16 @@ console.log('-------');
    - Example: "John Doe" -> "JOHN DOE"
 */
 
-console.log('Ex. 2');
+console.log("Ex. 2");
 function uppercaseName(name) {
   console.log(name.toUpperCase());
 }
 
-uppercaseName('cihan');
-uppercaseName('omer');
-uppercaseName('sevgi');
+uppercaseName("cihan");
+uppercaseName("omer");
+uppercaseName("sevgi");
 
-console.log('-------');
+console.log("-------");
 
 /*
 3. Lowercase Email
@@ -51,15 +51,15 @@ console.log('-------');
    - Example: "USER@Example.COM" -> "user@example.com"
 */
 
-console.log('Ex.3');
+console.log("Ex.3");
 function normalizeEmail(email) {
   console.log(email.toLowerCase());
 }
 
-normalizeEmail('USER@Example.COM');
-normalizeEmail('EXAMPle@Example.COM');
+normalizeEmail("USER@Example.COM");
+normalizeEmail("EXAMPle@Example.COM");
 
-console.log('-------');
+console.log("-------");
 
 /*
 4. Extract Domain
@@ -69,23 +69,23 @@ console.log('-------');
    - Example: "user@example.com" -> "example.com"
 */
 
-console.log('Ex. 4');
+console.log("Ex. 4");
 
 function getDomain(email) {
-  const indexOfAtSign = email.indexOf('@');
+  const indexOfAtSign = email.indexOf("@");
   console.log(email.substring(indexOfAtSign + 1));
 }
 
 function getDomain2(email) {
-  const array = email.split('@');
+  const array = email.split("@");
   console.log(array[1]);
 }
 
-getDomain('user@example.com');
-getDomain2('johndoe@example.com');
-getDomain2('someuser@example.com');
+getDomain("user@example.com");
+getDomain2("johndoe@example.com");
+getDomain2("someuser@example.com");
 
-console.log('-------');
+console.log("-------");
 
 /*
 5. Check Substring
@@ -95,7 +95,7 @@ console.log('-------');
    - Else, log: "<word> not found in sentence."
 */
 
-console.log('Ex. 5');
+console.log("Ex. 5");
 
 function containsWord(sentence, pattern) {
   const isFound = sentence.includes(pattern);
@@ -108,12 +108,12 @@ function containsWord(sentence, pattern) {
 }
 
 containsWord(
-  'Define a function HTML `containsWord(sentence, word)` that checks if the `sentence',
-  'ine',
+  "Define a function HTML `containsWord(sentence, word)` that checks if the `sentence",
+  "ine"
 );
-containsWord('Define a function', 'HTML');
+containsWord("Define a function", "HTML");
 
-console.log('-------');
+console.log("-------");
 
 /*
 6. File Extension Check
@@ -123,22 +123,22 @@ console.log('-------');
    - Otherwise, log: "Not a PDF file."
 */
 
-console.log('Ex. 6');
+console.log("Ex. 6");
 
 function checkFileExtension(filename) {
-  if (filename.endsWith('.pdf')) {
-    console.log('This is a PDF file.');
+  if (filename.endsWith(".pdf")) {
+    console.log("This is a PDF file.");
   } else {
-    console.log('Not a PDF file.');
+    console.log("Not a PDF file.");
   }
 }
 
-checkFileExtension('document.pdf');
-checkFileExtension('burcu.png');
-checkFileExtension('report.PDF');
-checkFileExtension('movie.mov');
+checkFileExtension("document.pdf");
+checkFileExtension("burcu.png");
+checkFileExtension("report.PDF");
+checkFileExtension("movie.mov");
 
-  console.log('-------');
+console.log("-------");
 /*
 7. Compare Numbers (if-else)
    - Define a function `compareNumbers(a, b)` that:
@@ -147,7 +147,7 @@ checkFileExtension('movie.mov');
      - Logs "Numbers are equal" if they are the same
 */
 
-console.log('Ex. 7');
+console.log("Ex. 7");
 
 function compareNumbers(a, b) {
   if (a > b) {
@@ -163,7 +163,7 @@ compareNumbers(8, 3);
 compareNumbers(3, 9);
 compareNumbers(3, 3);
 
-console.log('-------');
+console.log("-------");
 
 /*
 8. Palindrome Check
@@ -173,14 +173,14 @@ console.log('-------');
    - Otherwise, log: "<str> is not a palindrome"
 */
 
-console.log('Ex. 8');
+console.log("Ex. 8");
 
 function isPalindrome(str) {
-  const array = str.split('');
+  const array = str.split("");
   const reversedArray = array.reverse();
-  const reversedStr = reversedArray.join('')
-  
-  console.log(str, reversedStr, reversedArray)
+  const reversedStr = reversedArray.join("");
+
+  console.log(str, reversedStr, reversedArray);
 
   if (str.toLowerCase() === reversedStr.toLowerCase()) {
     console.log(`${str} is a palindrome`);
@@ -189,10 +189,10 @@ function isPalindrome(str) {
   }
 }
 
-isPalindrome('abc')
-isPalindrome('Aba')
+isPalindrome("abc");
+isPalindrome("Aba");
 
-console.log('-------');
+console.log("-------");
 
 /*
 9. String Truncation
@@ -201,18 +201,19 @@ console.log('-------');
    - Log the final truncated string.
 */
 
-console.log('Ex. 9');
+console.log("Ex. 9");
 
 function truncateString(text, maxLength) {
   if (text.length > maxLength) {
-    const truncated = text.slice(0, maxLength) + '...';
-    return truncated + '...';
+    const truncated = text.slice(0, maxLength) + "...";
+    console.log(truncated);
   }
   return text;
 }
 
-const longText = 'This is an example of a long string to see how to truncate it and I just writing more to make it longer';
-const shortText = 'Hello';
+const longText =
+  "This is an example of a long string to see how to truncate it and I just writing more to make it longer";
+const shortText = "Hello";
 
 const result1 = truncateString(longText, 103);
 console.log(`Result 1: "${result1}"`);
@@ -220,7 +221,7 @@ console.log(`Result 1: "${result1}"`);
 const result2 = truncateString(shortText, 3);
 console.log(`Result 2: "${result2}"`);
 
-console.log('-------'); 
+console.log("-------");
 /*
 10. Check Even or Odd (if-else)
    - Define a function `evenOrOdd(number)` that:
@@ -228,23 +229,23 @@ console.log('-------');
      - Logs "Odd" if the number is odd
 */
 
-console.log('Ex. 10');
+console.log("Ex. 10");
 
 function evenOrOdd(number) {
   if (number % 2 === 0) {
-    console.log('Even');
+    console.log("Even");
   } else {
-    console.log('Odd');
+    console.log("Odd");
   }
-  }
+}
 
-  evenOrOdd(8);
-  evenOrOdd(5);
-  evenOrOdd(12);
-  evenOrOdd(4);
-  evenOrOdd(9);
+evenOrOdd(8);
+evenOrOdd(5);
+evenOrOdd(12);
+evenOrOdd(4);
+evenOrOdd(9);
 
-  console.log('-------'); 
+console.log("-------");
 
 /*
 11. URL Protocol Checker
@@ -253,23 +254,22 @@ function evenOrOdd(number) {
    - Log "Secure connection" if true, otherwise "Unsecure connection".
 */
 
-console.log('Ex. 11');
+console.log("Ex. 11");
 
 function checkProtocol(url) {
-  if (url.toLowerCase().startsWith('https')) {
-    console.log('Secure connection');
+  if (url.toLowerCase().startsWith("https")) {
+    console.log("Secure connection");
   } else {
-    console.log('Unsecure connection');
+    console.log("Unsecure connection");
   }
 }
 
-checkProtocol('https://thisisasecurewebsite.com');
-checkProtocol('HTTP://thisisanunsecurewebsite.com');
-checkProtocol('HtTpS://MixedCase.com');
-checkProtocol('ftp://notsecure.com');
+checkProtocol("https://thisisasecurewebsite.com");
+checkProtocol("HTTP://thisisanunsecurewebsite.com");
+checkProtocol("HtTpS://MixedCase.com");
+checkProtocol("ftp://notsecure.com");
 
-console.log('-------');
-
+console.log("-------");
 
 /*
 12. Switch: Day of the Week
@@ -281,35 +281,34 @@ console.log('-------');
      - Log the matched day or "Invalid day" if out of range.
 */
 
-console.log('Ex. 12');
+console.log("Ex. 12");
 
 function getDayOfWeek(num) {
   let text;
   switch (num) {
-    case 1: 
-    text = 'Monday';
-    break;
+    case 1:
+      text = "Monday";
+      break;
     case 2:
-      text = 'Tuesday';
+      text = "Tuesday";
       break;
     case 3:
-      text = 'Wednesday';
+      text = "Wednesday";
       break;
-      case 4:
-      text = 'Thursday';
+    case 4:
+      text = "Thursday";
       break;
-      case 5:
-        text = 'Friday';
-        break;
-        case 6:
-          text = 'Saturday';
-          break;
-          case 7:
-            text = 'Sunday';
-            break;
-            default:
-              text = 'Invalid Day';
-
+    case 5:
+      text = "Friday";
+      break;
+    case 6:
+      text = "Saturday";
+      break;
+    case 7:
+      text = "Sunday";
+      break;
+    default:
+      text = "Invalid Day";
   }
   return text;
 }
@@ -318,7 +317,7 @@ console.log(getDayOfWeek(1));
 console.log(getDayOfWeek(4));
 console.log(getDayOfWeek(9));
 
-console.log('-------');
+console.log("-------");
 
 // value == value
 /// value and type === value and type
@@ -330,19 +329,17 @@ console.log('-------');
    - Log the repeated result.
 */
 
-console.log('Ex. 13');
+console.log("Ex. 13");
 
 function repeatWord(word, times) {
   const repeated = word.repeat(times);
   console.log(repeated);
-  
 }
 
-repeatWord('Apple', 4);
-repeatWord('Hola', 5);
+repeatWord("Apple", 4);
+repeatWord("Hola", 5);
 
-console.log('-------');
-
+console.log("-------");
 
 /*
 14. Replace Substring
@@ -351,20 +348,20 @@ console.log('-------');
    - Log the censored sentence.
 */
 
-console.log('Ex. 14');
+console.log("Ex. 14");
 
 function censorWord(sentence, target) {
-  const censored = sentence.replaceAll(target, '****');
+  const censored = sentence.replaceAll(target, "****");
   console.log(censored);
 }
 
-const sentence = 'This is a example sentence. We are testing the example function with different example words.';
-const word = 'example';
+const sentence =
+  "This is a example sentence. We are testing the example function with different example words.";
+const word = "example";
 
 censorWord(sentence, word);
 
-console.log('-------');
-
+console.log("-------");
 
 /*
 15. Check First Character (if-else)
@@ -373,21 +370,19 @@ console.log('-------');
    - Log "Starts with A" or "Does not start with A".
 */
 
-console.log('Ex. 15');
+console.log("Ex. 15");
 
 function startsWithA(str) {
-  if (str[0] === 'A')
-    console.log ('Starts with A');
+  if (str[0] === "A") console.log("Starts with A");
   else {
-    console.log('Does not start with A');
+    console.log("Does not start with A");
   }
 }
-startsWithA('Apple');
-startsWithA('Oranges');
-startsWithA('Aya');
+startsWithA("Apple");
+startsWithA("Oranges");
+startsWithA("Aya");
 
-console.log('-------');
-
+console.log("-------");
 
 /*
 16. Slice Last N Characters
@@ -396,21 +391,21 @@ console.log('-------');
    - Log the result.
 */
 
-console.log('Ex. 16');
+console.log("Ex. 16");
 
 function sliceLastN(text, n) {
   const stringSlice = text.slice(-n);
   console.log(stringSlice);
 }
 
-const myString = 'An example string and then we will have more fun';
+const myString = "An example string and then we will have more fun";
 
 sliceLastN(myString, 3);
 sliceLastN(myString, 10);
 sliceLastN(myString, 16);
 sliceLastN(myString, 2);
 
-console.log('-------');
+console.log("-------");
 
 /*
 17. Switch: Grade Checker
@@ -423,20 +418,20 @@ console.log('-------');
    - Log the grade.
 */
 
-console.log('Ex. 17');
+console.log("Ex. 17");
 
 function gradeChecker(score) {
   let grade;
   if (score >= 90) {
-    grade = 'A';
+    grade = "A";
   } else if (score >= 80) {
-    grade = 'B';
+    grade = "B";
   } else if (score >= 70) {
-    grade = 'C';
+    grade = "C";
   } else if (score >= 60) {
-    grade = 'D';
+    grade = "D";
   } else {
-    grade = 'F';
+    grade = "F";
   }
   console.log(grade);
 
@@ -449,7 +444,7 @@ gradeChecker(72);
 gradeChecker(65);
 gradeChecker(50);
 
-console.log('-------');
+console.log("-------");
 
 /*
 18. Character Replacement
@@ -458,16 +453,16 @@ console.log('-------');
    - Log the result.
 */
 
-console.log('Ex. 18');
+console.log("Ex. 18");
 
 function replaceCharacter(str, oldChar, newChar) {
   const replacedString = str.replaceAll(oldChar, newChar);
   console.log(replacedString);
 }
 
-replaceCharacter('Congratulations', 'o', 'a');
+replaceCharacter("Congratulations", "o", "a");
 
-console.log('-------');
+console.log("-------");
 
 /*
 19. Title Case a Sentence
@@ -478,21 +473,21 @@ console.log('-------');
    - Log the transformed string.
 */
 
-console.log('Ex. 19');
+console.log("Ex. 19");
 
 function titleCase(sentence) {
-  const words = sentence.split(' ');
+  const words = sentence.split(" ");
   const titleCaseWords = sentence.toLowerCase();
   const resultWords = words.map((word) => {
     return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
   });
-  const result = resultWords.join(' ');
+  const result = resultWords.join(" ");
   console.log(result);
 }
 
-titleCase('this is a example SENTENCE to TEST TITLE case FUNCTION');
+titleCase("this is a example SENTENCE to TEST TITLE case FUNCTION");
 
-console.log('-------');
+console.log("-------");
 
 /*
 20. Switch: Traffic Light
@@ -503,32 +498,32 @@ console.log('-------');
      - anything else -> "Invalid color"
 */
 
-console.log('Ex. 20');
+console.log("Ex. 20");
 
 function trafficLight(color) {
   let action;
   switch (color.toLowerCase()) {
-    case 'red':
-      action = 'Stop';
+    case "red":
+      action = "Stop";
       break;
-    case 'yellow':
-      action = 'Caution';
+    case "yellow":
+      action = "Caution";
       break;
-    case 'green':
-      action = 'Go';
+    case "green":
+      action = "Go";
       break;
     default:
-      action = 'Incorrect color';
+      action = "Incorrect color";
   }
   console.log(action);
 }
 
-trafficLight('orange');
-trafficLight('red');
-trafficLight('green');
-trafficLight('yellow');
+trafficLight("orange");
+trafficLight("red");
+trafficLight("green");
+trafficLight("yellow");
 
-console.log('-------');
+console.log("-------");
 
 /*
 21. Check String Length (if-else)
@@ -537,20 +532,19 @@ console.log('-------');
    - Log "Long string" or "Short string".
 */
 
-console.log('Ex. 21');
+console.log("Ex. 21");
 
 function isLongString(str) {
   if (str.length > 10) {
-    console.log('Long string');
+    console.log("Long string");
   } else {
-    console.log('Short string');
+    console.log("Short string");
   }
 }
-isLongString('This is a long string example');
-isLongString('hello');
+isLongString("This is a long string example");
+isLongString("hello");
 
-console.log('-------');
-
+console.log("-------");
 
 /*
 22. Convert to Lowercase Then Check
@@ -560,21 +554,21 @@ console.log('-------');
    - Otherwise, log "This text is not spam."
 */
 
-console.log('Ex. 22');
+console.log("Ex. 22");
 
 function isSpam(text) {
   const lowerCasedText = text.toLowerCase();
-  if (lowerCasedText.includes('spam')) {
-    console.log('This text is spam.');
+  if (lowerCasedText.includes("spam")) {
+    console.log("This text is spam.");
   } else {
-    console.log('This text is not spam.');
+    console.log("This text is not spam.");
   }
 }
 
-isSpam('This is example spam message that contains spam word.');
-isSpam('This is a regular message.');
+isSpam("This is example spam message that contains spam word.");
+isSpam("This is a regular message.");
 
-console.log('-------');
+console.log("-------");
 
 /*
 23. Extract Initials
@@ -583,21 +577,21 @@ console.log('-------');
    - Example: "John Doe" -> "J.D."
 */
 
-console.log('Ex. 23');
+console.log("Ex. 23");
 
 function getInitials(fullName) {
-  const nameParts = fullName.split(' ');
-  let initials = '';
+  const nameParts = fullName.split(" ");
+  let initials = "";
   for (const part of nameParts) {
-    initials += part.charAt(0).toUpperCase() + '.';
+    initials += part.charAt(0).toUpperCase() + ".";
   }
   console.log(initials);
 }
 
-getInitials('burcu kayan');
-getInitials('sahin kayan');
+getInitials("burcu kayan");
+getInitials("sahin kayan");
 
-console.log('-------');
+console.log("-------");
 
 /*
 24. Switch: Month to Season
@@ -609,35 +603,35 @@ console.log('-------');
    - Log the season or "Invalid month" if out of range.
 */
 
-console.log('Ex. 24');
+console.log("Ex. 24");
 
 function getSeason(monthNum) {
   let season;
   switch (monthNum) {
     case 12:
-      case 1:
-        case 2:
-          season = 'Winter';
-          break;
-          case 3:
-            case 4:
-              case 5:
-                season = 'Spring';
-                break;
-                case 6:
-                  case 7:
-                    case 8:
-                      season = 'Summer';
-                      break;
-                      case 9:
-                        case 10:
-                          case 11:
-                            season = 'Autumn';
-                            break;
-                            default:
-                              season = 'Invalid month';
+    case 1:
+    case 2:
+      season = "Winter";
+      break;
+    case 3:
+    case 4:
+    case 5:
+      season = "Spring";
+      break;
+    case 6:
+    case 7:
+    case 8:
+      season = "Summer";
+      break;
+    case 9:
+    case 10:
+    case 11:
+      season = "Autumn";
+      break;
+    default:
+      season = "Invalid month";
   }
-return season;
+  return season;
 }
 
 console.log(getSeason(1));
@@ -645,7 +639,7 @@ console.log(getSeason(15));
 console.log(getSeason(9));
 console.log(getSeason(5));
 
-console.log('-------');
+console.log("-------");
 
 /*
 25. Check If String Contains Number
@@ -654,22 +648,22 @@ console.log('-------');
    - Log "Contains number" or "No number found".
 */
 
-console.log('Ex. 25');
+console.log("Ex. 25");
 
 function containsNumber(str) {
   const hasNumber = /\d/.test(str);
 
   if (hasNumber) {
-    console.log('Contains number');
+    console.log("Contains number");
   } else {
-    console.log('No number found');
+    console.log("No number found");
   }
 }
 
-containsNumber('This is a test 123');
-containsNumber('There is no number here');
+containsNumber("This is a test 123");
+containsNumber("There is no number here");
 
-console.log('-------');
+console.log("-------");
 
 /*
 26. Pad a String
@@ -678,24 +672,21 @@ console.log('-------');
    - Log the padded string.
 */
 
-console.log('Ex. 26');
+console.log("Ex. 26");
 
 function padString(str, maxLength) {
   let paddedString;
   if (str.length < maxLength) {
-    paddedString = str.padEnd(maxLength, '*');
+    paddedString = str.padEnd(maxLength, "*");
   } else {
     paddedString = str;
   }
   console.log(paddedString);
-
 }
 
-padString('My name is Burcu', 25);
+padString("My name is Burcu", 25);
 
-console.log('-------');
-
-
+console.log("-------");
 
 /*
 27. If-Else: Voting Eligibility
@@ -704,20 +695,20 @@ console.log('-------');
      - "Too young to vote" otherwise
 */
 
-console.log('Ex. 27');
+console.log("Ex. 27");
 
 function canVote(age) {
   if (age >= 18) {
-    console.log('Can vote');
+    console.log("Can vote");
   } else {
-    console.log('Too young to vote');
+    console.log("Too young to vote");
   }
 }
 
 canVote(30);
 canVote(10);
 
-console.log('-------');
+console.log("-------");
 
 /*
 28. Reverse Words in a Sentence
@@ -728,18 +719,18 @@ console.log('-------');
    - Log the result.
 */
 
-console.log('Ex. 28');
+console.log("Ex. 28");
 
 function reverseWords(sentence) {
-  const words = sentence.split(' ');
-  const reversedWords = words.map(word => word.split('').reverse().join(''));
-  const result = reversedWords.join(' ');
+  const words = sentence.split(" ");
+  const reversedWords = words.map((word) => word.split("").reverse().join(""));
+  const result = reversedWords.join(" ");
   console.log(result);
 }
 
-reverseWords('My name is Burcu');
+reverseWords("My name is Burcu");
 
-console.log('-------');
+console.log("-------");
 
 /*
 29. Check Substring Position
@@ -748,21 +739,21 @@ console.log('-------');
    - Log the index or log "Not found" if it's -1.
 */
 
-console.log('Ex. 29');
+console.log("Ex. 29");
 
 function findWordPosition(sentence, word) {
   const index = sentence.indexOf(word);
   if (index !== -1) {
     console.log(`Index of "${word}": ${index}`);
   } else {
-    console.log('Not found');
+    console.log("Not found");
   }
 }
 
-findWordPosition('This is a simple example sentence.', 'example');
-findWordPosition('My name is Burcu Kayan', 'is');
+findWordPosition("This is a simple example sentence.", "example");
+findWordPosition("My name is Burcu Kayan", "is");
 
-console.log('-------');
+console.log("-------");
 
 /*
 30. Switch: Simple Calculator
@@ -775,33 +766,33 @@ console.log('-------');
    - Log the result.
 */
 
-console.log('Ex. 30');
+console.log("Ex. 30");
 
 function calculate(a, operator, b) {
   let result;
-  switch(operator) {
-    case '+':
-    result = a + b;
-    break;
-    case '-':
-    result = a - b;
-    break;
-    case '*':
-    result = a * b;
-    break;
-    case '/':
-    result = a / b;
-    break;
+  switch (operator) {
+    case "+":
+      result = a + b;
+      break;
+    case "-":
+      result = a - b;
+      break;
+    case "*":
+      result = a * b;
+      break;
+    case "/":
+      result = a / b;
+      break;
     default:
-    result = 'Invalid operator';
+      result = "Invalid operator";
   }
   return result;
 }
 
-console.log(calculate(6, '+', 5));
-console.log(calculate(10, '-', 3));
-console.log(calculate(4, '*', 2));
-console.log(calculate(20, '/', 4));
-console.log(calculate(8, '%', 2));
+console.log(calculate(6, "+", 5));
+console.log(calculate(10, "-", 3));
+console.log(calculate(4, "*", 2));
+console.log(calculate(20, "/", 4));
+console.log(calculate(8, "%", 2));
 
-console.log('-------');
+console.log("-------");
