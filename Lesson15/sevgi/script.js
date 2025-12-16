@@ -34,7 +34,6 @@ console.log('-------');
 */
 
 console.log('Ex. 2');
-
 function uppercaseName(name) {
   console.log(name.toUpperCase());
 }
@@ -52,16 +51,6 @@ console.log('-------');
    - Example: "USER@Example.COM" -> "user@example.com"
 */
 
-console.log('Ex. 3');
-
-function normalizeEmail(email) {
-  console.log(email.toLowerCase());
-}
-
-normalizeEmail("USER@Example.COM");
-normalizeEmail("sevGikilic@GMAİL.COM");
-
-
 /*
 4. Extract Domain
    - Define a function `getDomain(email)` that uses `slice` or `substring` to
@@ -70,7 +59,7 @@ normalizeEmail("sevGikilic@GMAİL.COM");
    - Example: "user@example.com" -> "example.com"
 */
 
-console.log('Ex. 4');
+console.log('Ex. 3');
 
 function getDomain(email) {
   const indexOfAtSign = email.indexOf('@');
@@ -120,24 +109,6 @@ containsWord('Define a function', 'HTML');
    - Otherwise, log: "Not a PDF file."
 */
 
-console.log('Ex. 6');
-
-function checkFileExtension(filename) {
-  if (filename.endsWith(".pdf")){
-    console.log("This is a PDF file.");
-  } else{
-    console.log("Not a PDF file.");
-  }
-}
-
-const filename = "exercise.pdf";
-checkFileExtension(filename);
-
-checkFileExtension("download this exercise.pdf");
-checkFileExtension("download this exercise.PDF");
-checkFileExtension("download this exercise.pdf ");
-
-
 /*
 7. Compare Numbers (if-else)
    - Define a function `compareNumbers(a, b)` that:
@@ -169,8 +140,6 @@ compareNumbers(3, 3);
    - If it is, log: "<str> is a palindrome"
    - Otherwise, log: "<str> is not a palindrome"
 */
-console.log('Ex. 8');
-
 function isPalindrome(str) {
   const array = str.split('');
   const reversedArray = array.reverse();
@@ -196,21 +165,6 @@ isPalindrome('Aba')
    - Log the final truncated string.
 */
 
-console.log('Ex. 9');
-
-function truncateString(text, maxLength){
-  if (text.length > maxLength){
-    const newText = text.slice(0, maxLength) + "...";
-    console.log(newText);
-  } else {
-    console.log(text);
-  }
-}
-
-truncateString("I am learning JS", 9);
-truncateString("apple", 5);
-
-
 /*
 10. Check Even or Odd (if-else)
    - Define a function `evenOrOdd(number)` that:
@@ -218,40 +172,12 @@ truncateString("apple", 5);
      - Logs "Odd" if the number is odd
 */
 
-console.log('Ex. 10');
-
-function evenOrOdd(number) {
-  if (number % 2 === 0){
-    console.log("Even");
-  } else {
-    console.log("Odd");
-  }
-}
-
-evenOrOdd(10);
-evenOrOdd(23);
-
-
 /*
 11. URL Protocol Checker
    - Define a function `checkProtocol(url)` that converts the URL to lowercase
      and checks if it starts with "https" using .startsWith().
    - Log "Secure connection" if true, otherwise "Unsecure connection".
 */
-
-console.log('Ex. 11');
-
-function checkProtocol(url) {
-  const newUrl = url.toLowerCase();
-  if(newUrl.startsWith("https")){
-    console.log("Secure connection");
-  } else {
-    console.log("Unsecure connection");
-  }
-  }
-
-checkProtocol("https://www.w3schools.COM/js/js_functions.asp");
-
 
 /*
 12. Switch: Day of the Week
@@ -266,59 +192,12 @@ checkProtocol("https://www.w3schools.COM/js/js_functions.asp");
 // value == value
 /// value and type === value and type
 
-console.log('Ex. 12');
-
-function getDayOfWeek(num) {
-  let day;
-
-  switch (num){
-    case 1:
-      day = "Monday";
-      break;  
-    case 2:
-      day = "Tuesday";
-      break;
-    case 3:
-      day = "Wednesday";
-      break;
-    case 4:
-      day = "Thursday";
-      break;  
-    case 5:
-      day = "Friday";
-      break;
-    case 6:
-      day = "Saturday";
-      break;
-    case 7:
-      day = "Sunday";
-      break;
-    default:
-      day = "Invalid day";
-  }
-  console.log(day);
-}
-
-getDayOfWeek(7);
-getDayOfWeek(11);
-
-
 /*
 13. Repeat a String
    - Define a function `repeatWord(word, times)` that uses the .repeat() method
      to repeat `word` `times` times.
    - Log the repeated result.
 */
-
-console.log('Ex. 13');
-
-function repeatWord(word, times) {
-  let wordResult = word.repeat();
-  console.log(wordResult);
-}
-
-repeatWord(wordResult, 3);
-
 
 /*
 14. Replace Substring
