@@ -142,7 +142,7 @@ function updateRecipe(name, newIngredients, newCookingTime){
       return;
     }
   }
-  console.log(`Already doesn't exist. `)
+  console.log(`Recipe ${name} not found. Cannot update. `)
 
 
 
