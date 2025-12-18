@@ -98,10 +98,11 @@ console.log('Ex. 4');
 
 function sumRange(start, end) {
   let sum = 0;
+  let current = start;
 
-  while (start <= end) {
-    sum += start;
-    start ++;
+  while (current <= end) {
+    sum += current;
+    current++;
   }
 
   console.log(sum);
