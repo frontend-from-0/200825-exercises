@@ -123,14 +123,14 @@ const name = 'Alice';
 const age = 30;
 const city = "Paris";
 
-console.log('Ex. 16:', `Alice (${age}) lives in ${city}`);
+console.log('Ex. 16:', `${name} (${age}) lives in ${city}`);
 
 // 17. Declare variables x=5, y=10, z=15. Log their total sum.
-const x = 5;
+const xEx17 = 5;
 const y = 10;
 const z = 15;
 
-console.log('Ex. 17:', x + y + z);
+console.log('Ex. 17:', xEx17 + y + z);
 
 // 18. Declare dividend=10 and divisor=3. Log the quotient (divisionResult) and difference (differenceResult).
 const dividend = 10;
@@ -166,7 +166,7 @@ console.log('Ex. 20:', product);
 console.log('Ex. 21:', Math.PI);
 
 // 22. Declare counter=0. Increment it using three different methods (e.g., counter++, counter+=1, counter=counter+1) and log the result each time.
-let counter = 0;
+counter = 0;
 
 console.log('Ex. 22 method 1:', counter++);
 console.log('After method 1:', counter);
@@ -203,9 +203,9 @@ const finalValue = numberEx11 * 2;
 console.log('Ex.26:', finalValue)
 
 // 27. Declare a=2 and b=3. Increment a using the prefix ++ operator, then add b to the result and log it.
-let a = 2;
-const b = 3;
+let ex27a = 2;
+const ex27b = 3;
 
-++a;
-const result = a + b;
+++ex27a;
+const result = ex27a + ex27b;
 console.log('Ex. 27:', result);
