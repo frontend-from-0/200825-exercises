@@ -531,11 +531,7 @@ function containsNumber(str) {
 console.log('Ex. 26');
 
 function padString(str, maxLength) {
-  if (str.length < maxLength) {
-    console.log(str.padEnd(maxLength, '*'));
-  } else {
-    console.log(str);
-  }
+  return str.padEnd(maxLength, '*');
 }
 
 /*
