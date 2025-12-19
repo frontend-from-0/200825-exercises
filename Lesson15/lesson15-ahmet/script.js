@@ -284,26 +284,26 @@ function getDayOfWeek(num) {
     case 1:
       console.log('Monday');
       break;
-    case 2:
-      console.log('Tuesday');
-      break;
-    case 3:
-      console.log('Wednesday');
-      break;
-    case 4:
-      console.log('Thursday');
-      break;
-    case 5:
-      console.log('Friday');
-      break;
-    case 6:
-      console.log('Saturday');
-      break;
-    case 7:
-      console.log('Sunday');
-      break;
-    default:
-      console.log('Invalid day');
+      case 2:
+        console.log('Tuesday');
+        break;
+        case 3:
+          console.log('Wednesday');
+          break;
+          case 4:
+            console.log('Thursday');
+            break;
+            case 5:
+              console.log('Friday');
+              break;
+              case 6:
+                console.log('Saturday');
+                break;
+                case 7:
+                  console.log('Sunday');
+                  break;
+                default:
+                  console.log('Invalid day')
   }
 }
 getDayOfWeek(5);
@@ -587,27 +587,27 @@ console.log('Ex.24');
 function getSeason(monthNum) {
   switch (monthNum) {
     case 12:
-    case 1:
-    case 2:
-      console.log('Winter');
-      break;
-    case 3:
-    case 4:
-    case 5:
-      console.log('Spring');
-      break;
-    case 6:
-    case 7:
-    case 8:
-      console.log('Summer');
-      break;
-    case 9:
-    case 10:
-    case 11:
-      console.log('Autumn');
-      break;
-    default:
-      console.log('Invalid month');
+      case 1:
+        case 2:
+          console.log('Winter');
+          break;
+          case 3:
+            case 4:
+              case 5:
+                console.log('Spring');
+                break;
+                case 6:
+                  case 7:
+                    case 8:
+                      console.log('Summer');
+                      break;
+                      case 9:
+                        case 10:
+                          case 11:
+                            console.log('Autumn');
+                            break;
+                            default:
+                              console.log('Invalid month');
   }
 }
 
@@ -749,17 +749,18 @@ function calculate(a, operator, b) {
     case '+':
       console.log(a + b);
       break;
-    case '-':
-      console.log(a - b);
-      break;
-    case '*':
-      console.log(a * b);
-      break;
-    case '/':
-      console.log(a / b);
-      break;
-    default:
-      console.log('Invalid operator');
+      case '-':
+        console.log(a - b);
+        break;
+        case '*':
+          console.log(a * b);
+          break;
+          case '/':
+            console.log(a / b);
+            break;
+
+            default:
+              console.log('Invalid operator');
   }
 }
 
@@ -768,5 +769,3 @@ calculate(30, '-', 8);
 calculate(30, '*', 8);
 calculate(30, '/', 6);
 calculate(30, 'a', 8);
-
-console.log('-------');
