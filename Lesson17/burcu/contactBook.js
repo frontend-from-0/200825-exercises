@@ -47,7 +47,7 @@ function displayAllContacts() {
   console.log('Displaying all contacts...');
   for (let i = 0; i < contacts.length; i++) {
     const currentContact = contacts[i];
-
+    console.log('Displaying all the contacts...');
     console.log(
       `Name: ${currentContact.name}, Phone: ${currentContact.phone}, Email: ${currentContact.email}`,
     );

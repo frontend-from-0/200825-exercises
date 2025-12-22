@@ -47,6 +47,7 @@ Function: displayAllRecipes()
  console.log('-----------------------');
 
 function displayAllRecipes() {
+  console.log('Displaying all the recipes');
   for (const recipe of recipes) {
     console.log(`Name: ${recipe.name}`);
     console.log(`Ingredients: ${recipe.ingredients.join(', ')}`);
@@ -69,12 +70,13 @@ Function: addRecipe(name, ingredients, cookingTime)
 */
 
 console.log('-----------------------');
-
+console.log('Function: addRecipe(name, ingredients, cookingTime) - adds a new recipe if a recipe with the same name does not already exist.');
 function addRecipe(name, ingredients, cookingTime) {
-  const existingRecipe = recipes.find(recipe => recipe.name.toLowerCase() === name.toLowerCase());
-  if (existingRecipe) {
-    console.log(`Warning: A recipe with the name "${name}" already exists.`);
-    return;
+  for (let i = 0; i < recipes.length; i++) {
+    if (recipes[i].name.toLowerCase() === name.toLowerCase()) {
+      console.log(`Warning: A recipe with the name "${name}" already exists.`);
+      return;
+    }
   }
 
   const newRecipe = {
