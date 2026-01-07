@@ -284,3 +284,5 @@ searchContact('John');
 searchContact('John', '123 456 12 34');
 searchContact('John', undefined, 'john@gmail.com');
 searchContact(undefined, '123 456 12 34', 'john@gmail.com');
+
+/* */
