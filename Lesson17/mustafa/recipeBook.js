@@ -220,4 +220,6 @@ function filterByIngredient(ingredient) {
     console.log(`No recipes found with the ingredient: ${ingredient}`);
   }
   console.log('------------------');
+
+  
 }
