@@ -37,11 +37,11 @@ class ShoppingCart {
   }
 
   viewCart() {
-    console.log('Viewing the cart');
+    console.log("Viewing the cart");
 
     for (const item of this.#items) {
       console.log(
-        `Name: ${item.name}, Price: ${item.price.amount} ${item.price.currency} Quantity: ${item.quantity}`,
+        `Name: ${item.name}, Price: ${item.price.amount} ${item.price.currency} Quantity: ${item.quantity}`
       );
     }
   }
@@ -59,14 +59,16 @@ class ShoppingCart {
 */
 
   // newItem should be an object
+  
   addItem(newItem) {
     console.log(
-      `Adding a new item to the cart. Item name ${newItem.name}, quantity: ${newItem.quantity}`,
+      `Adding a new item to the cart. Item name ${newItem.name}, quantity: ${newItem.quantity}`
     );
+
     for (let i = 0; i < this.#items.length; i++) {
       if (this.#items[i].name.includes(newItem.name)) {
         this.#items[i].quantity++;
-         this.#total += newItem.price.amount;
+        this.#total += newItem.price.amount;
         return;
       }
     }
@@ -75,13 +77,16 @@ class ShoppingCart {
     this.#total += newItem.price.amount;
   }
 
+
   removeItem(name) {
     console.log(`Removing an item from the cart. Item name ${name}.`);
+
     for (let i = 0; i < this.#items.length; i++) {
       if (this.#items[i].name === name) {
         this.#total -= this.#items[i].price.amount;
         this.#items.splice(i, 1);
         console.log(`Removed item ${name}.`);
+        return;
       }
     }
   }
@@ -95,37 +100,67 @@ class ShoppingCart {
   //   return total;
   // }
 
-  get total () {
+    get total() {
     console.log(`The total of the all products: ${this.#total}`);
     return this.#total;
   }
+
+  getTotal() {
+    return this.total;
+  }
+
+  applyDiscount(code) {
+    const discounts = {
+      SAVE10: 0.10,
+      SAVE20: 0.20,
+    };
+
+    if (!(code in discounts)) {
+      console.log("Invalid discount code.");
+      return this.total;
+    }
+
+    const discountedTotal = this.total * (1 - discounts[code]);
+    console.log(`Discount applied: ${code}. New total: ${discountedTotal}`);
+    return discountedTotal;
+  }
+
 }
 
 const shoppingCart1 = new ShoppingCart();
 shoppingCart1.viewCart();
+
 shoppingCart1.addItem({
-  name: 'Tablet',
-  price: { amount: 1000, currency: 'USD' },
+  name: "Tablet",
+  price: { amount: 1000, currency: "USD" },
   quantity: 1,
 });
 
 shoppingCart1.viewCart();
+
 shoppingCart1.addItem({
-  name: 'Tablet',
-  price: { amount: 1000, currency: 'USD' },
+  name: "Tablet",
+  price: { amount: 1000, currency: "USD" },
   quantity: 1,
 });
+
 shoppingCart1.addItem({
-  name: 'Monitor',
-  price: { amount: 500, currency: 'USD' },
+  name: "Monitor",
+  price: { amount: 500, currency: "USD" },
   quantity: 2,
 });
+
 shoppingCart1.viewCart();
 shoppingCart1.getTotal();
 
-shoppingCart1.removeItem('Tablet');
+shoppingCart1.removeItem("Tablet");
 shoppingCart1.viewCart();
 shoppingCart1.getTotal();
+
+shoppingCart1.applyDiscount("SAVE10");
+shoppingCart1.applyDiscount("NOPE");
+
+
 
 /*
 -----------------------------------------------------------
@@ -159,3 +194,5 @@ shoppingCart1.getTotal();
      code is valid.
 3. Use an object to store discount codes and their values.
 */
+
+
