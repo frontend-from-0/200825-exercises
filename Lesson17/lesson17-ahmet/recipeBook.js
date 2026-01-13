@@ -56,6 +56,8 @@ Function: displayAllRecipes()
 */
 
 function displayAllRecipes() {
+console.log('-----------');
+console.log('Displaying all recipes');
   if (recipes.length === 0) {
     console.log("No recipes available.");
     return;
