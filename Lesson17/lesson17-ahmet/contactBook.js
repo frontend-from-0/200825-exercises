@@ -77,7 +77,7 @@ function addContact(name, phone, email) {
   for (let i = 0; i < contacts.length; i++) {
     if (contacts[i].name === name) {
       console.warn(
-        `Contact with name ${name} already exists. \nContact in the list: Name: ${contacts[i].name}, email: ${contacts[i].email}, phone: ${contacts[i].phone}}`
+        `Contact with name ${name} already exists. \nContact in the list: Name: ${contacts[i].name}, email: ${contacts[i].email}, phone: ${contacts[i].phone}`
       );
       return;
     }
