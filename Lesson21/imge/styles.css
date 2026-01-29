@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #1a3a31;
+  color: #ffffff;
+}
+
+main {
+  max-width: 960px;
+  margin: 96px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+form {
+  width: 100%; 
+  max-width: 540px;
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.input-group {
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #a8d5c8;
+  margin-left: 4px;
+}
+
+input {
+  background-color: #264d41;
+  border: 1.5px solid transparent;
+  border-radius: 12px;
+  padding: 14px 18px;
+  color: #ffffff;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  width: 100%;
+  display: block;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+input:focus {
+  outline: none;
+  background-color: #ffffff;
+  color: #1a3a31;
+  border-color: #ffffff;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1);
+}
+
+.input-error {
+  color: #ff8e8e;
+  font-size: 13px;
+  margin: 4px 0 0 4px;
+  font-weight: 500;
+  min-height: 18px;
+}
+
+.btn-success {
+  margin-top: 10px;
+  border: none;
+  border-radius: 12px;
+  padding: 16px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  color: #1a3a31;
+  background-color: #ffffff;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-success:hover {
+  background-color: #e6e6e6;
+  transform: translateY(-2px);
+}
+
+#success {
+  background: #ffffff;
+  color: #1a3a31;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 448px;
+  width: 100%;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+#success h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #214a3d;
+}
+
+#success p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #444;
+}
+
+.hidden {
+  display: none;
+}
