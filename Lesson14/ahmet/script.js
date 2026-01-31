@@ -172,7 +172,7 @@ console.log('Ex.23', 'Today is weather:', initialTemperature, 'Celcius degree.' 
 
 // 24. Declare numberEx9=6. Increment it using the prefix ++ operator and log both the variable and the incremented value.
 let numberEx9 = 6;
-let incrementedValue = ++numberEx9;
+const incrementedValue = ++numberEx9;
 console.log('Ex.24', 'numberEx9 after ++:', numberEx9);
 console.log('Ex.24', 'incremented value:', incrementedValue);
 
