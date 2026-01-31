@@ -151,7 +151,7 @@ const secondFactor = 2;
 console.log('Ex.20', 'Product: ', firstFactor * secondFactor);
 
 // 21. Log the value of Math.PI.
-let p = Math.PI;
+const p = Math.PI;
 console.log('Ex.21', 'Number PI= ', p);
 
 // 22. Declare counter=0. Increment it using three different methods (e.g., counter++, counter+=1, counter=counter+1) and log the result each time.
