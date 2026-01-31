@@ -195,5 +195,5 @@ console.log('Ex.26', 'Multiplied value:', incrementedValue3);
  let q = 2; 
  const incrementedValue4 = ++q;
  const w = 3;
- let finalValue = incrementedValue4 + w;
+ const finalValue = incrementedValue4 + w;
  console.log('eX.27', 'final value is:', finalValue);
