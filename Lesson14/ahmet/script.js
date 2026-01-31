@@ -179,7 +179,7 @@ console.log('Ex.24', 'incremented value:', incrementedValue);
 
 // 25. Declare numberEx10=8. Increment it using the postfix ++ operator and log both the original variable and the incremented value.
 let numberEx10 = 8;
-let incrementedValue2 = numberEx10++;
+const incrementedValue2 = numberEx10++;
 console.log('Ex.25', 'Original numberEx10:', numberEx10 - 1);
 console.log('Ex.25', 'numberEx10 incremented value after postfix ++:', incrementedValue2);
 console.log('Ex.25', 'numberEx10 after postfix ++:', numberEx10);
