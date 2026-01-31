@@ -188,7 +188,7 @@ console.log('Ex.25', 'numberEx10 after postfix ++:', numberEx10);
 
 // 26. Declare numberEx11=-3. Increment it by 1 using prefix ++, then multiply the result by 2 and log the final value.
 let numberEx11 = -3;
-let incrementedValue3 = ++numberEx11 * 2;
+const incrementedValue3 = ++numberEx11 * 2;
 console.log('Ex.26', 'Multiplied value:', incrementedValue3);
 
 // 27. Declare a=2 and b=3. Increment a using the prefix ++ operator, then add b to the result and log it.
