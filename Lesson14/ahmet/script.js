@@ -193,7 +193,7 @@ console.log('Ex.26', 'Multiplied value:', incrementedValue3);
 
 // 27. Declare a=2 and b=3. Increment a using the prefix ++ operator, then add b to the result and log it.
  let q = 2; 
- let incrementedValue4 = ++q
+ const incrementedValue4 = ++q;
  let w = 3;
  let finalValue = incrementedValue4 + w;
  console.log('eX.27', 'final value is:', finalValue);
