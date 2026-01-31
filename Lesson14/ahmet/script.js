@@ -141,7 +141,7 @@ const divisor = 3;
 console.log('Ex.18', 'divisionResult:', dividend / divisor , 'differenceResult:', dividend - divisor );
 
 // 19. Declare firstName and lastName. Create fullName by concatenating them with a space and log it.
-let firstName = "Ahmet";
+const firstName = "Ahmet";
 let lastName = "YAYIK"
 console.log('Ex.19', 'fullName =', firstName + " " + lastName);
 
