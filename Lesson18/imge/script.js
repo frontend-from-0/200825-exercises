@@ -30,10 +30,15 @@ Node.js or a browser console.
 class ShoppingCart {
   #items;
   #total;
+  #discounts;
 
   constructor() {
     this.#items = [];
     this.#total = 0;
+    this.#discounts = {
+      SAVE10: 0.10,
+      SAVE20: 0.20,
+    };
   }
 
   viewCart() {
@@ -61,29 +66,28 @@ class ShoppingCart {
   // newItem should be an object
   
   addItem(newItem) {
-    console.log(
-      `Adding a new item to the cart. Item name ${newItem.name}, quantity: ${newItem.quantity}`
-    );
+  console.log(
+    `Adding a new item to the cart. Item name ${newItem.name}, quantity: ${newItem.quantity}`
+  );
 
-    for (let i = 0; i < this.#items.length; i++) {
-      if (this.#items[i].name.includes(newItem.name)) {
-        this.#items[i].quantity++;
-        this.#total += newItem.price.amount;
-        return;
-      }
+  for (let i = 0; i < this.#items.length; i++) {
+    if (this.#items[i].name === newItem.name) {
+      this.#items[i].quantity += newItem.quantity;
+      this.#total += newItem.price.amount * newItem.quantity;
+      return;
     }
-
-    this.#items.push(newItem);
-    this.#total += newItem.price.amount;
   }
 
+  this.#items.push(newItem);
+  this.#total += newItem.price.amount * newItem.quantity;
+}
 
   removeItem(name) {
     console.log(`Removing an item from the cart. Item name ${name}.`);
 
     for (let i = 0; i < this.#items.length; i++) {
       if (this.#items[i].name === name) {
-        this.#total -= this.#items[i].price.amount;
+        this.#total -= this.#items[i].price.amount * this.#items[i].quantity;
         this.#items.splice(i, 1);
         console.log(`Removed item ${name}.`);
         return;
@@ -100,31 +104,21 @@ class ShoppingCart {
   //   return total;
   // }
 
-    get total() {
+  getTotal() {
     console.log(`The total of the all products: ${this.#total}`);
     return this.#total;
   }
 
-  getTotal() {
-    return this.total;
-  }
-
   applyDiscount(code) {
-    const discounts = {
-      SAVE10: 0.10,
-      SAVE20: 0.20,
-    };
-
-    if (!(code in discounts)) {
+    if (!(code in this.#discounts)) {
       console.log("Invalid discount code.");
-      return this.total;
+      return this.getTotal();
     }
 
-    const discountedTotal = this.total * (1 - discounts[code]);
+    const discountedTotal = this.getTotal() * (1 - this.#discounts[code]);
     console.log(`Discount applied: ${code}. New total: ${discountedTotal}`);
     return discountedTotal;
   }
-
 }
 
 const shoppingCart1 = new ShoppingCart();
