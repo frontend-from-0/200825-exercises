@@ -77,7 +77,7 @@ function addContact(name, phone, email) {
   for (let i = 0; i < contacts.length; i++) {
     if (contacts[i].name === name) {
       console.warn(
-        `Contact with name ${name} already exists. \nContact in the list: Name: ${contacts[i].name}, email: ${contacts[i].email}, phone: ${contacts[i].phone}}`,
+        `Contact with name ${name} already exists. \nContact in the list: Name: ${contacts[i].name}, email: ${contacts[i].email}, phone: ${contacts[i].phone}`,
       );
       return;
     }
@@ -271,8 +271,19 @@ function searchContact(name, email, phone) {
   if (!found) console.log('No contact found');
 }
 
+console.log('--- Testing searchContact ---');
 
 searchContact('John');
 searchContact('John', 'john@gmail.com');
 searchContact('John', undefined, '123 456 789');
 searchContact(undefined, 'john@gmail.com', '123 456 789');
+searchContact();
+
+console.log('--- Testing findContact ---');
+findContact('jo');
+findContact('doe');
+findContact('xyz');
+
+console.log('--- Testing sortContactsByName ---');
+sortContactsByName();
+displayAllContacts();
