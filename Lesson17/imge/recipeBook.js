@@ -118,7 +118,7 @@ function viewRecipe(name) {
     }
   }
 
-   console.log(`Recipe '${name}' not found.`);
+  console.log(`Recipe '${name}' not found.`);
 }
 
 /*
@@ -205,3 +205,30 @@ function filterByMaxTime(maxMinutes) {
     console.log('No recipes found');
   }
 }
+
+console.log('--- Display all recipes (initial) ---');
+displayAllRecipes();
+
+console.log('--- Add recipe tests ---');
+addRecipe('Pasta', ['pasta', 'tomato'], 15);
+addRecipe('Pancake', ['egg', 'milk', 'flour'], 12);
+
+console.log('--- View recipe tests ---');
+viewRecipe('Pancake');
+viewRecipe('NonExisting');
+
+console.log('--- Update recipe tests ---');
+updateRecipe('Pancake', ['egg', 'milk', 'flour', 'butter'], 14);
+updateRecipe('NonExisting', ['x'], 1);
+
+console.log('--- Filter tests ---');
+filterByIngredient('egg');
+filterByIngredient('chocolate');
+filterByMaxTime(10);
+
+console.log('--- Delete recipe tests ---');
+deleteRecipe('Pancake');
+deleteRecipe('NonExisting');
+
+console.log('--- Display all recipes (final) ---');
+displayAllRecipes();
