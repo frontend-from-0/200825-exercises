@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background: #f7f7f7;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.booking {
+  display: flex;
+  gap: 2rem;
+}
+
+.calendar {
+  flex: 2;
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.calendar label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.calendar input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  width: 100%;
+  margin-bottom: 1.5rem;
+  border: 1px solid #767676;
+  border-radius: 2px;
+  background-color: white;
+  font-family: inherit;
+}
+
+fieldset {
+  border: none;
+}
+
+.timeslots {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 1rem;
+}
+
+.slot {
+  padding: 1rem;
+  background-color: #eee;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.2s;
+}
+
+.slot:hover {
+  background-color: #ddd;
+}
+
+.selected {
+  background-color: #0077cc;
+  color: white;
+}
+
+.selected:hover {
+  background-color: #005fa3;
+}
+
+.summary {
+  flex: 1;
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.summary p {
+  margin: 1rem 0;
+}
+
+#confirm {
+  padding: 0.75rem 1rem;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#confirm:hover {
+  background-color: #005fa3;
+}
+
+#confirm:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.hidden {
+  display: none;
+}
+
+#confirmation-message {
+  background-color: #005fa3;
+  color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0, 95, 163, 0.3); 
+}
+
+#confirmation-message h2 {
+  margin-top: 0;
+  color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+#confirmation-message p {
+  font-size: 1.1rem;
+  margin: 10px 0;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.2); 
+  padding-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 400px;
+  margin-right: auto;
+}
+
+#confirmation-message span {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
