@@ -1,3 +1,5 @@
+const totalPriceElement = document.getElementById('total');
+
 const products = {
   apples: {
     quantity: 1,
@@ -38,8 +40,6 @@ function updateTotalUI() {
   totalPriceElement.textContent = totalPrice;
 }
 
-const totalPriceElement = document.getElementById('total');
-
 document.addEventListener('DOMContentLoaded', function () {
   loadCartFromStorage();
   
@@ -76,45 +76,39 @@ document.addEventListener('DOMContentLoaded', function () {
   totalPriceElement.textContent = totalPrice;
 });
 
-function addToCart(product) {
-  products[product].quantity++;
-  totalPrice += products[product].price;
+function changeQuantity(product, delta) {
+  const oldQty = products[product].quantity;
+  const newQty = Math.max(0, oldQty + delta);
+  const actualDelta = newQty - oldQty;
+
+  if (actualDelta === 0) return;
+
+  products[product].quantity = newQty;
+  totalPrice += actualDelta * products[product].price;
 
   updateProductUI(product);
   updateTotalUI();
   persistCart();
+}
+
+
+function addToCart(product) {
+  changeQuantity(product, +1);
 }
 
 function removeFromCart(product) {
-  const oldQuantity = products[product].quantity;
-  products[product].quantity = 0;
-
-  totalPrice -= products[product].price * oldQuantity;
-
-  updateProductUI(product);
-  updateTotalUI();
-  persistCart();
+  changeQuantity(product, -products[product].quantity);
 }
 
 function increment(product) {
-  products[product].quantity++;
-  totalPrice += products[product].price;
-
-  updateProductUI(product);
-  updateTotalUI();
-  persistCart();
+  changeQuantity(product, +1);
 }
+
 
 function decrement(product) {
-  if (products[product].quantity <= 0) return;
-
-  products[product].quantity--;
-  totalPrice -= products[product].price;
-
-  updateProductUI(product);
-  updateTotalUI();
-  persistCart();
+  changeQuantity(product, -1);
 }
+
 
 function clearCart() {
   for (const product in products) {
@@ -124,6 +118,8 @@ function clearCart() {
 
   totalPrice = 0;
   updateTotalUI();
+
+  persistCart();
 }
 
 function persistCart() {
