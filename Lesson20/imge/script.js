@@ -15,6 +15,8 @@ const confirmedTime = document.getElementById('confirmed-time');
 const confirmationMessage = document.getElementById('confirmation-message');
 
 const data = {
+  name: '',
+  email: '',
   date: null,
   time: null,
 };
@@ -26,11 +28,15 @@ const minDateStr = tomorrow.toISOString().split('T')[0];
 dateInput.min = minDateStr;
 
 nameInput.addEventListener('change', (e) => {
+  data.name = e.target.value;
   summaryName.textContent = e.target.value || '-';
+  allowSubmit(); 
 });
 
 emailInput.addEventListener('change', (e) => {
+  data.email = e.target.value;
   summaryEmail.textContent = e.target.value || '-';
+  allowSubmit();
 });
 
 dateInput.addEventListener('change', function () {
@@ -46,12 +52,12 @@ dateInput.addEventListener('change', function () {
 bookingForm.addEventListener('submit', function (event) {
   event.preventDefault();
   
-  if (!data.date || !data.time) {
+  if (!data.name || !data.email || !data.date || !data.time) {
     return;
-  }
+  } 
 
-  confirmedName.textContent = nameInput.value;
-  confirmedEmail.textContent = emailInput.value;
+  confirmedName.textContent = data.name;
+  confirmedEmail.textContent = data.email;
   confirmedDate.textContent = data.date;
   confirmedTime.textContent = data.time;
 
@@ -73,7 +79,7 @@ function deselectTimeSlots() {
 }
 
 function allowSubmit() {
-  if (data.date && data.time) {
+  if (data.name && data.email && data.date && data.time) {
     confirmButton.removeAttribute('disabled');
   } else {
     confirmButton.setAttribute('disabled', 'true');
