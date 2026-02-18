@@ -61,7 +61,7 @@ cvvInput.addEventListener('input', (cvvNumber) => {
 })
 function validateEmail() {
   if (emailPattern.test(emailInput.value)) {
-    emailError.innerText = '';
+    emailError.textContent = '';
   } else {
     emailError.innerText =
       'Please enter correct email address (e.g. john@gmail.com)';
@@ -84,7 +84,7 @@ function validateName(input, errorField) {
     errorField.innerText = 'This field should contain less than 50 characters.';
     formCorrect = false;
   } else {
-    if (onlyLettersPattern.test(input.value)) {
+    if (onlyLettersPattern.test(input.value.trim())) {
       errorField.innerText = '';
     } else {
       errorField.innerText = 'This field can only contain letters.';
@@ -109,6 +109,7 @@ function validateExpDate(){
   }
   else {
     expDateError.innerText = 'Please enter valid expression date.'
+    formCorrect = false
   }
 }
 
@@ -119,6 +120,7 @@ function validateCVV(){
   }
   else {
     cvvError.innerText = 'Please enter CVV code which existing on behind your card.'
+    formCorrect = false
   }
 }
 

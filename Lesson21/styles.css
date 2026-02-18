@@ -33,7 +33,7 @@ input {
 }
 
 .input-error {
-  color: rgb(98, 37, 37);
+  color: #ff6b6b;
   font-size: 14px;
   margin: 0;
   height: 16px;
