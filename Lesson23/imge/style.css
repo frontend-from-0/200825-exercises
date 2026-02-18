@@ -1,0 +1,24 @@
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 16px;
+  font-family: Arial, sans-serif;
+}
+
+.posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.post {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 14px;
+  background: white;
+}
+
+.post:focus {
+  outline: 3px solid black;
+}
