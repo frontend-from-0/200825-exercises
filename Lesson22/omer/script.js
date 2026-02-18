@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if(products[product].quantity <= 0){
       productCartItem.classList.add('hidden');
       
-      totalPrice = 0;
+      
     }
     else{
       productCartItem.classList.remove('hidden')
@@ -64,19 +64,13 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function addToCart(product) {
-  products[product].quantity++;
-  const newQuantity = products[product].quantity;
-
-  totalPrice += products[product].price;
-  totalPriceElement.textContent = totalPrice;
-
-  const productQuantitySpan = document.getElementById(`${product}_quantity`);
-  productQuantitySpan.textContent = newQuantity;
+  
+  
 
   const productCartItem = document.getElementById(`${product}_cart`);
   productCartItem.classList.remove('hidden');
 
-  saveToLocalStorage();
+  incrementQuantity(product);
 }
 
 function removeFromCart(product) {
@@ -93,7 +87,7 @@ function removeFromCart(product) {
   saveToLocalStorage();
 }
 
-function decrementFromCart(product) {
+function decrementQuantity(product) {
   products[product].quantity--;
   const newDecreasedQuantity = products[product].quantity;
 
@@ -106,11 +100,11 @@ function decrementFromCart(product) {
   if(newDecreasedQuantity <= 0){
     removeFromCart(product);
   }
-
-  saveToLocalStorage();
+else {saveToLocalStorage();}
+  
 }
 
-function incrementToQuantity(product){
+function incrementQuantity(product){
   products[product].quantity++;
   const newQuantity = products[product].quantity;
 
