@@ -4,7 +4,7 @@
 
 body {
   margin: 0;
-  background-color: #17352C;
+  background-color: #214a3d;
   color: #fff;
 }
 
@@ -25,15 +25,15 @@ form {
 }
 
 input {
-  background: #245245;
+  background: #92ceb9;
   border: none;
   border-radius: 8px;
   padding: 16px;
-  color: #F8FCFA;
+  color: #333333;
 }
 
 .input-error {
-  color: #ffffff;
+  color: #ff6b6b;
   font-size: 14px;
   margin: 0;
   height: 16px;
@@ -50,9 +50,6 @@ input {
   color: #214a3d;
   background-color: #fff;
 }
-
-
-
 
 .hidden {
   display: none;
