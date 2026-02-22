@@ -9,7 +9,6 @@ fetch("https://jsonplaceholder.typicode.com/posts")
     posts.forEach((post) => {
       const article = document.createElement("article");
       article.className = "post";
-      article.setAttribute("tabindex", "0");
 
       const title = document.createElement("h2");
       title.textContent = post.title;
