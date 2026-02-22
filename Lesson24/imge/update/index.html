@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Update user</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" href="../styles.css">
+</head>
+<body>
+  <div class="container ctas">
+    <a class="button" href="../index.html">Back</a>
+  </div>
+
+  <div class="container">
+    <h1>Update user</h1>
+
+    <form id="updateUserForm" class="card" aria-label="Update user form">
+      <p id="userInfo"></p>
+
+      <label>
+        First name
+        <input id="firstName" name="firstName" autocomplete="given-name" required />
+      </label>
+      <br /><br />
+
+      <label>
+        Last name
+        <input id="lastName" name="lastName" autocomplete="family-name" required />
+      </label>
+      <br /><br />
+
+      <label>
+        Age
+        <input id="age" name="age" type="number" min="1" required />
+      </label>
+      <br /><br />
+
+      <button class="button button--success" type="submit">Update</button>
+      <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
