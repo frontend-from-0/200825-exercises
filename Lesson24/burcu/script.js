@@ -101,3 +101,4 @@ function deleteUser(userId, cardElement) {
       status.style.color = "red";
     });
 }
+
