@@ -81,6 +81,8 @@ function deselectTimeSlots() {
 
 function allowSubmit() {
   if (data.name && data.email && data.date && data.time) {
-    confirmButton.removeAttribute("disabled");
+    confirmButton.disabled = false;
+  } else {
+    confirmButton.disabled = true;
   }
 }
