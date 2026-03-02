@@ -1,13 +1,14 @@
-const closeStatusButton = document.querySelector("#statusContainer button");
-
-closeStatusButton.addEventListener("click", () => {
-  statusContainer.classList.add("hidden");
-});
+const closeStatusButton = document.querySelector("#closeStatusBtn");
 const usersContainer = document.getElementById("users");
 const statusContainer = document.getElementById("statusContainer");
 const status = document.getElementById("status");
 
 document.getElementById("getUsersButton").addEventListener("click", fetchUsers);
+
+closeStatusButton.addEventListener("click", () => {
+  statusContainer.classList.add("hidden");
+});
+
 
 function fetchUsers() {
   fetch("https://dummyjson.com/users")

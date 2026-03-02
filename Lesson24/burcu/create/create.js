@@ -1,3 +1,9 @@
+const firstNameValue = document.getElementById("firstName").value;
+  const lastNameValue = document.getElementById("lastName").value;
+  const ageValue = document.getElementById("age").value;
+
+
+
 const form = document.getElementById("createUserForm");
 const statusContainer = document.getElementById("statusContainer");
 const status = document.getElementById("status");
@@ -5,9 +11,7 @@ const status = document.getElementById("status");
 form.addEventListener("submit", function (event) {
   event.preventDefault();
 
-  const firstNameValue = document.getElementById("firstName").value;
-  const lastNameValue = document.getElementById("lastName").value;
-  const ageValue = document.getElementById("age").value;
+  
 
   fetch("https://dummyjson.com/users/add", {
     method: "POST",
@@ -27,7 +31,8 @@ form.addEventListener("submit", function (event) {
     .then((data) => {
       form.reset();
       statusContainer.classList.remove("hidden");
-      status.textContent = `${data.firstName} ${data.lastName} successfully added! (API ID: ${data.id})`;
+      status.textContent = `${data.firstName} ${data.lastName} successfully added! (User Id: ${data.id})`;  
+
       status.style.color = "green";
     })
     .catch((error) => {
