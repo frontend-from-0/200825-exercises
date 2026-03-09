@@ -36,6 +36,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const incrementButton = document.getElementById(`${product}_increment`);
     const decrementButton = document.getElementById(`${product}_decrement`);
 
+    incrementButton.addEventListener("click", () => incrementProduct(product));
+    decrementButton.addEventListener("click", () => decrementProduct(product));
+
     // Select increment / decrement buttons for every product and add event listeners to them
   }
 
