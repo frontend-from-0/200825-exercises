@@ -39,6 +39,9 @@ document.addEventListener("DOMContentLoaded", function () {
     incrementButton.addEventListener("click", () => incrementProduct(product));
     decrementButton.addEventListener("click", () => decrementProduct(product));
 
+    const clearButton = document.getElementById("cart_clear");
+    clearButton.addEventListener("click", clearCart);
+
     // Select increment / decrement buttons for every product and add event listeners to them
   }
 
@@ -93,4 +96,19 @@ function decrementProduct(product) {
 
     totalPriceElement.textContent = totalPrice;
   }
+}
+
+function clearCart() {
+  totalPrice = 0;
+
+  for (const product in products) {
+    products[product].quantity = 0;
+
+    document.getElementById(`${product}_quantity`).textContent = 0;
+
+    const productCartItem = document.getElementById(`${product}_cart`);
+    productCartItem.classList.add("hidden");
+  }
+
+  totalPriceElement.textContent = totalPrice;
 }
