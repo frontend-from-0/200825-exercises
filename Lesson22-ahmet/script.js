@@ -70,3 +70,27 @@ function removeFromCart(product) {
   const productCartItem = document.getElementById(`${product}_cart`);
   productCartItem.classList.add("hidden");
 }
+
+function incrementProduct(product) {
+  products[product].quantity++;
+
+  totalPrice += products[product].price;
+
+  document.getElementById(`${product}_quantity`).textContent =
+    products[product].quantity;
+
+  totalPriceElement.textContent = totalPrice;
+}
+
+function decrementProduct(product) {
+  if (products[product].quantity > 0) {
+    products[product].quantity--;
+
+    totalPrice -= products[product].price;
+
+    document.getElementById(`${product}_quantity`).textContent =
+      products[product].quantity;
+
+    totalPriceElement.textContent = totalPrice;
+  }
+}
