@@ -71,6 +71,7 @@ console.log("-----------------");
 // Count the number of unique elements in the array.
 
 console.log("Ex. 5:");
+
 const numbers = [1, 2, 3, 2, 4, 3, 5];
 
 const uniqueCount = numbers.reduce((accumulator, currentValue) => {
