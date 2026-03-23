@@ -63,5 +63,9 @@ function removeFromCart(product) {
 
   const productCartItem = document.getElementById(`${product}_cart`);
   productCartItem.classList.add('hidden');
+  saveCart();
 }
 
+function saveCart() {
+    localStorage.setItem('cart',JSON.stringify(products));
+}
