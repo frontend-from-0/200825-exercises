@@ -86,10 +86,9 @@ function decrement(product, productQuantity) {
     productQuantity.textContent=products[product].quantity;
     totalPrice += products[product].price;
     document.getElementById('total_price').textContent=totalPrice;
-    
+
   }
 }
-)
 
 function saveCart() {
     localStorage.setItem('cart',JSON.stringify(products));
