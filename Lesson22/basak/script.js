@@ -4,8 +4,8 @@ const products = {
     price: 1,
   },
   bananas: {
-    quantity: 2,
-    price: 5,
+    quantity: 1,
+    price: 1,
   },
   bread: {
     quantity: 1,
@@ -13,26 +13,11 @@ const products = {
   },
   eggs: {
     quantity: 1,
-    price: 5,
+    price: 1,
   },
 };
 let totalPrice = 0;
 
-/* Added localStorage functionality by searching from MDN then help with GEMINI.
-I understand the logic behind.*/
-
-function loadCart() {
-  const savedCart = localStorage.getItem("cart");
-  if (savedCart) {
-    Object.assign(products, JSON.parse(savedCart));
-  }
-}
-
-function saveCart() {
-  localStorage.setItem("cart", JSON.stringify(products));
-}
-
-loadCart();
 
 document.addEventListener("DOMContentLoaded", () => {
   totalPrice = 0;
@@ -125,3 +110,16 @@ function clearCart() {
   document.getElementById("total_price").textContent = totalPrice;
   saveCart();
 }
+
+function loadCart() {
+  const savedCart = localStorage.getItem("cart");
+  if (savedCart) {
+    Object.assign(products, JSON.parse(savedCart));
+  }
+}
+
+function saveCart() {
+  localStorage.setItem("cart", JSON.stringify(products));
+}
+
+loadCart();
