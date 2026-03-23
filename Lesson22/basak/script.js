@@ -77,8 +77,10 @@ function decrement(product, productQuantity) {
     productQuantity.textContent=products[product].quantity;
     totalPrice -= products[product].price;
     document.getElementById('total_price').textContent = totalPrice;
+    saveCart();
   } else {
     removeFromCart(product);
+    saveCart();
   }
 
   function increment ( product, productQuantity) {
@@ -86,7 +88,7 @@ function decrement(product, productQuantity) {
     productQuantity.textContent=products[product].quantity;
     totalPrice += products[product].price;
     document.getElementById('total_price').textContent=totalPrice;
-
+saveCart();
   }
 }
 
