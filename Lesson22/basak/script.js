@@ -33,8 +33,13 @@ document.addEventListener('DOMContentLoaded', function () {
     const removeCartButton = document.getElementById(`${product}_remove`);
     removeCartButton.addEventListener('click', () => removeFromCart(product));
 
-    // Select increment / decrement buttons for every product and add event listeners to them
-  }
+    const decrementButton = document.getElementById(`${product}_decrement`);
+    decrementButton.addEventListener('click', () => decrement(product,productQuantity));
+
+    const incrementButton = document.getElementById(`${product}_increment`);
+    incrementButton.addEventListener('click', () => increment(product,productQuantity));
+
+}
 
   totalPriceElement.textContent = totalPrice;
 });
@@ -65,6 +70,26 @@ function removeFromCart(product) {
   productCartItem.classList.add('hidden');
   saveCart();
 }
+
+function decrement(product, productQuantity) {
+  if(products[product].quantity >1 ) {
+    products[product].quantity--;
+    productQuantity.textContent=products[product].quantity;
+    totalPrice -= products[product].price;
+    document.getElementById('total_price').textContent = totalPrice;
+  } else {
+    removeFromCart(product);
+  }
+
+  function increment ( product, productQuantity) {
+    products[product].quantity++;
+    productQuantity.textContent=products[product].quantity;
+    totalPrice += products[product].price;
+    document.getElementById('total_price').textContent=totalPrice;
+    
+  }
+}
+)
 
 function saveCart() {
     localStorage.setItem('cart',JSON.stringify(products));
