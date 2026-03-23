@@ -9,7 +9,7 @@ const products = {
   },
   bread: {
     quantity: 1,
-    price: 5,
+    price: 1,
   },
   eggs: {
     quantity: 1,
