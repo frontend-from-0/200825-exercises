@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Update User</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Kullanıcı Güncelle</h1>
+      <form id="updateUserForm">
+        <div class="card">
+          <label for="firstName">Adı:</label>
+          <input
+            type="text"
+            id="firstName"
+            required
+            class="button"
+            style="background: white; color: black; display: block; width: 100%"
+          />
+
+          <label for="lastName">Soyadı:</label>
+          <input
+            type="text"
+            id="lastName"
+            required
+            class="button"
+            style="background: white; color: black; display: block; width: 100%"
+          />
+
+          <label for="age">Yaş:</label>
+          <input
+            type="number"
+            id="age"
+            required
+            class="button"
+            style="background: white; color: black; display: block; width: 100%"
+          />
+
+          <div class="ctas">
+            <button type="submit" class="button button--success">
+              Güncellemeleri Kaydet
+            </button>
+            <a href="../index.html" class="button">İptal</a>
+          </div>
+        </div>
+      </form>
+    </div>
+    <script src="../update/script.js"></script>
+  </body>
+</html>

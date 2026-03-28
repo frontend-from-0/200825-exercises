@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Create New User</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Create New User</h1>
+      <form id="createUserForm">
+        <div class="card">
+          <input
+            type="text"
+            id="firstName"
+            placeholder="First Name"
+            required
+            class="button"
+            style="background: white; color: black; display: block; width: 100%"
+          />
+          <input
+            type="text"
+            id="lastName"
+            placeholder="Last Name"
+            required
+            class="button"
+            style="background: white; color: black; display: block; width: 100%"
+          />
+          <input
+            type="number"
+            id="age"
+            placeholder="Age"
+            required
+            class="button"
+            style="background: white; color: black; display: block; width: 100%"
+          />
+
+          <div class="ctas">
+            <button type="submit" class="button button--success">
+              Save User
+            </button>
+            <a href="../index.html" class="button">Cancel</a>
+          </div>
+        </div>
+      </form>
+      <div id="status" class="hidden"></div>
+    </div>
+    <script src="../create/script.js"></script>
+  </body>
+</html>
