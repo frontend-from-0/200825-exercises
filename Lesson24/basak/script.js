@@ -18,7 +18,7 @@ HTTP status codes are three-digit numbers that the server sends in response to a
 
 const usersContainer = document.getElementById('users');
 const statusContainer = document.getElementById('statusContainer');
-const status = document.getElementById('status');
+const statusMessage = document.getElementById('status');
 
 document.getElementById('getUsersButton').addEventListener('click', fetchUsers);
 
@@ -38,13 +38,15 @@ function fetchUsers() {
       data.users.forEach((user) => createUserCard(user));
     })
     .catch((error) => {
-      // TODO: add logic to handle errors (e.g. display error message)
+      statusContainer.classList.remove('hidden');
+      statusMessage.textContent = `Error: ${error.message}`;
     });
 }
 
 function createUserCard(user) {
   const card = document.createElement('div');
   card.classList.add('card');
+  card.dataset.userId = user.id;
 
   const cardTitle = document.createElement('h2');
   cardTitle.classList.add('card-title');
@@ -80,27 +82,32 @@ function createUserCard(user) {
 }
 
 function deleteUser(userId) {
-  fetch(`https://dummyjson.com/usrs/${userId}`, {
+  fetch(`https://dummyjson.com/users/${userId}`, {
     method: 'DELETE',
   })
     .then((res) => {
-      if (!response.ok) {
+      if (!res.ok) {
         throw Error(
-          `Failed deleting user ${userId}`,
-          response.status,
-          response.statusText,
+          `Failed deleting user ${userId}: ${res.status} ${res.statusText}`
         );
       }
 
       return res.json();
     })
     .then(() => {
-      // Show notification in the HTML that the user was deleted (and which user was deleted)
-      // Remove the user card or change it's appearance so it's easy to understand that this user was deleted
+
+      statusContainer.classList.remove('hidden');
+      statusMessage.textContent = `User with ID ${userId} is deleted successfully!`;
+
+      const card = usersContainer.querySelector(`[data-user-id="${userId}"]`);
+      if (card) {
+        card.remove();
+      }
+      usersContainer.classList.remove('hidden');
+
     })
     .catch((error) => {
-      console.error(`Failed deleting user ${userId}`, error);
       statusContainer.classList.remove('hidden');
-      status.textContent = `Failed deleting user ${userId}`;
-    });
+      statusMessage.textContent = `Error: ${error.message}`;
+    })
 }
