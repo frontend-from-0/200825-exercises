@@ -277,7 +277,7 @@ const wordsExercise8 = [
 	'jungle',
 ];
 
-const above5Char = wordsExercise8.filter(char => char.trim().slice().length > 5);
+const above5Char = wordsExercise8.filter(word => word.trim().length > 5);
 console.log(above5Char);
 // Exercise 9:
 // Given an array of objects representing students, filter out the students who have a grade lower than C.
@@ -414,5 +414,5 @@ const usersExercise10 = [
 	},
 ];
 
-const startsWithJ = usersExercise10.filter(student => student.name.toLowerCase().startsWith('j'))
+const startsWithJ = usersExercise10.filter(user => user.name.toLowerCase().startsWith('j'))
 console.log(startsWithJ)

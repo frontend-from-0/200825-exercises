@@ -30,8 +30,8 @@ const people = [
   { name: "Gary", age: 35 },
   { name: "Ellen", age: 22 }
 ];
-const elderToYounger = people.sort((a,b) => b.age - a.age);
-console.log(elderToYounger)
+const youngerToElder = people.sort((a,b) => a.age - b.age);
+console.log(youngerToElder)
 // Exercise 5: Complex Sorting
 // Sort an array of strings by their length.
 // Expected output: ["pen", "book", "paper", "pencil", "notebook"]
