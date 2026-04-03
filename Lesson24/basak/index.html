@@ -1,22 +1,23 @@
-<!DOCTYPE html lang='en'>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Products</title>
+  <title>Get Users</title>
   <link rel="stylesheet" type="text/css" href="styles.css">
   <meta charset="UTF-8">
 </head>
 <body>
   <div class="container ctas">
-    <button class="button button--success button--user" id="getUsersButton">Get Users</button>
-    <a class="button button--success button--user" href="./create/index.html">Create a new user</a>
+    <button class="button button--success" id="getUsersButton">Get Users</button>
+    <a class="button button--success" href="./create/index.html">Create A New User</a>
     
   </div>
+    
   <!-- TODO: style error message -->
   <div class="container" class="hidden" id="statusContainer">
     <p id="status"></p>
     <!-- TODO: add close button -->
-     <button>X</button>
+     <button id="closeButton">X</button>
   </div>
   
   <div class="container" id="users">
@@ -40,5 +41,6 @@
   </div>
 
   <script src="script.js"></script>
+
 </body>
 </html>

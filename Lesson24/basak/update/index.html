@@ -1,11 +1,44 @@
-<!DOCTYPE html lang='en'>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Update User</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="../styles.css">
   <meta charset="UTF-8">
 </head>
 <body>
+    <main> 
+        <h1>Update User</h1>
+        <div class="container" class="hidden" id="statusContainer">
+    <p id="status"></p>
+
+     <button id="closeButton">X</button>
+  </div>
+        <div>
+        <form id="updateUserForm" class="container form--group card">
+            <div>
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName">
+            </div>
+            <div>
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName">
+            </div>
+            <div>
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age">
+            </div>
+            <button type="submit" class="button button--success container" id="updateUserButton">
+                Update User
+            </button>
+        </form>
+    </div>
+</main>
+<a class="button button--success button--home" href="../index.html"
+      >Back to Homepage</a>
+   
+      <script src="./update.js"></script>
+
 
 </body>
+</html>
