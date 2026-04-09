@@ -108,6 +108,15 @@ containsWord('Define a function', 'HTML');
    - If it does, log: "This is a PDF file."
    - Otherwise, log: "Not a PDF file."
 */
+console.log('Ex. 6');
+
+function checkFileExtension(filename) {
+  if (filename.endsWith('.pdf')) {
+    console.log('This is a PDF file.');
+  } else {
+    console.log('Not a PDF file.');
+  }
+}
 
 /*
 7. Compare Numbers (if-else)
@@ -164,6 +173,18 @@ isPalindrome('Aba')
      cut the string to `maxLength` characters, then appends "..." if it was too long.
    - Log the final truncated string.
 */
+ console.log('Ex. 9');
+
+ function truncateString(text, maxLength) {
+ if (text.length > maxLength) {
+  const truncated = text.slice(0, maxLength) + '...';
+  console.log(truncated);
+  
+ } else {
+  console.log(text);
+ }
+
+}
 
 /*
 10. Check Even or Odd (if-else)
@@ -171,6 +192,15 @@ isPalindrome('Aba')
      - Logs "Even" if the number is even
      - Logs "Odd" if the number is odd
 */
+ console.log('Ex. 10');
+
+ function evenOrOdd(number) {
+  if (number % 2 === 0) {
+    console.log('Even');
+  } else {
+    console.log('Odd');
+  }
+}
 
 /*
 11. URL Protocol Checker
@@ -178,6 +208,16 @@ isPalindrome('Aba')
      and checks if it starts with "https" using .startsWith().
    - Log "Secure connection" if true, otherwise "Unsecure connection".
 */
+console.log('Ex. 11');
+
+function checkProtocol(url) {
+  const lowerCasedUrl = url.toLowerCase();
+  if (lowerCasedUrl.startsWith('https')) {
+    console.log('Secure connection');
+  } else {
+    console.log('Unsecure connection');
+  }
+}
 
 /*
 12. Switch: Day of the Week
@@ -188,6 +228,34 @@ isPalindrome('Aba')
      7 -> "Sunday"
      - Log the matched day or "Invalid day" if out of range.
 */
+  console.log('Ex. 12');
+function getDayOfWeek(num) {
+  switch (num) {
+    case 1:
+      console.log('Monday');
+      break;
+    case 2:
+      console.log('Tuesday'); 
+      break;
+    case 3:
+      console.log('Wednesday');
+      break;
+    case 4:
+      console.log('Thursday');
+      break;
+    case 5:
+      console.log('Friday');
+      break;
+    case 6:
+      console.log('Saturday');
+      break;
+    case 7:
+      console.log('Sunday');
+      break;
+    default:
+      console.log('Invalid day');
+  }
+}
 
 // value == value
 /// value and type === value and type
@@ -198,6 +266,11 @@ isPalindrome('Aba')
      to repeat `word` `times` times.
    - Log the repeated result.
 */
+ console.log('Ex. 13');
+ function repeatWord(word, times) {
+  const result = word.repeat(times);
+  console.log(result);
+}
 
 /*
 14. Replace Substring
@@ -205,6 +278,11 @@ isPalindrome('Aba')
      with "****" (use .replaceAll() or multiple .replace()).
    - Log the censored sentence.
 */
+  console.log('Ex. 14');
+  function censorWord(sentence, target) {
+    const censoredSentence = sentence.replaceAll(target, "****");
+    console.log(censoredSentence);
+  }
 
 /*
 15. Check First Character (if-else)
@@ -212,6 +290,14 @@ isPalindrome('Aba')
      (use .charAt(0) or [0]).
    - Log "Starts with A" or "Does not start with A".
 */
+  console.log('Ex. 15');
+  function startsWithA(str) {
+    if (str.charAt(0) === 'A' || str.charAt(0) === 'a') {
+      console.log("Starts with A");
+    } else {
+      console.log("Does not start with A");
+    }
+  }
 
 /*
 16. Slice Last N Characters
@@ -219,6 +305,11 @@ isPalindrome('Aba')
      the last `n` characters of `text`.
    - Log the result.
 */
+  console.log('Ex. 16');
+  function sliceLastN(text, n) {
+  const result = text.slice(-n);
+  console.log(result);
+}
 
 /*
 17. Switch: Grade Checker
@@ -230,6 +321,20 @@ isPalindrome('Aba')
      below 60 -> "F"
    - Log the grade.
 */
+  console.log('Ex. 17');
+  function gradeChecker(score) {
+    if (score >= 90) {
+      console.log("A");
+    } else if (score >= 80) {
+      console.log("B");
+    } else if (score >= 70) {
+      console.log("C");
+    } else if (score >= 60) {
+      console.log("D");
+    } else {
+      console.log("F");
+    }
+  }
 
 /*
 18. Character Replacement
@@ -237,6 +342,11 @@ isPalindrome('Aba')
      (or a loop) to swap all occurrences of oldChar with newChar.
    - Log the result.
 */
+  console.log('Ex. 18');
+  function replaceCharacter(str, oldChar, newChar) {
+    const result = str.replaceAll(oldChar, newChar);
+    console.log(result);
+  }
 
 /*
 19. Title Case a Sentence
@@ -246,6 +356,15 @@ isPalindrome('Aba')
      - Joins them back
    - Log the transformed string.
 */
+  console.log('Ex. 19');
+  function titleCase(sentence) {
+    const words = sentence.split(' ');
+    const titleCasedWords = words.map(word => {
+      return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+    });
+    const titleCasedSentence = titleCasedWords.join(' ');
+    console.log(titleCasedSentence);
+  }
 
 /*
 20. Switch: Traffic Light
@@ -255,6 +374,22 @@ isPalindrome('Aba')
      - "green" -> log: "Go"
      - anything else -> "Invalid color"
 */
+  console.log('Ex. 20');
+  function trafficLight(color) {
+    switch (color.toLowerCase()) {
+      case 'red':
+        console.log('Stop');
+        break;
+      case 'yellow':
+        console.log('Caution');
+        break;
+      case 'green':
+        console.log('Go');
+        break;
+      default:
+        console.log('Invalid color');
+    }
+  }
 
 /*
 21. Check String Length (if-else)
@@ -262,6 +397,14 @@ isPalindrome('Aba')
      is more than 10.
    - Log "Long string" or "Short string".
 */
+  console.log('Ex. 21');
+  function isLongString(str) {
+    if (str.length > 10) {
+      console.log('Long string');
+    } else {
+      console.log('Short string');
+    }
+  }
 
 /*
 22. Convert to Lowercase Then Check
@@ -270,6 +413,15 @@ isPalindrome('Aba')
    - If it does, log "This text is spam."
    - Otherwise, log "This text is not spam."
 */
+  console.log('Ex. 22');
+  function isSpam(text) {
+    const lowerCasedText = text.toLowerCase();
+    if (lowerCasedText.includes('spam')) {
+      console.log('This text is spam.');
+    } else {
+      console.log('This text is not spam.');
+    }
+  }
 
 /*
 23. Extract Initials
@@ -277,6 +429,12 @@ isPalindrome('Aba')
      then logs the capitalized first letter of each.
    - Example: "John Doe" -> "J.D."
 */
+  console.log('Ex. 23');
+  function getInitials(fullName) {
+    const nameParts = fullName.split(' ');
+    const initials = nameParts.map(part => part.charAt(0).toUpperCase()).join('.') + '.';
+    console.log(initials);
+  }
 
 /*
 24. Switch: Month to Season
@@ -287,6 +445,33 @@ isPalindrome('Aba')
      - 9, 10, 11 -> "Autumn"
    - Log the season or "Invalid month" if out of range.
 */
+  console.log('Ex. 24');
+  function getSeason(monthNum) {
+    switch (monthNum) {
+      case 12:
+      case 1:
+      case 2:
+        console.log('Winter');
+        break;
+      case 3:
+      case 4:
+      case 5:
+        console.log('Spring');
+        break;
+      case 6:
+      case 7:
+      case 8:
+        console.log('Summer');
+        break;
+      case 9:
+      case 10:
+      case 11:
+        console.log('Autumn');
+        break;
+      default:
+        console.log('Invalid month');
+    }
+  }
 
 /*
 25. Check If String Contains Number
@@ -294,6 +479,15 @@ isPalindrome('Aba')
      .match() to check if there's any digit in the string.
    - Log "Contains number" or "No number found".
 */
+  console.log('Ex. 25');
+  function containsNumber(str) {
+    const hasNumber = /\d/.test(str);
+    if (hasNumber) {
+      console.log('Contains number');
+    } else {
+      console.log('No number found');
+    }
+  }
 
 /*
 26. Pad a String
@@ -301,6 +495,15 @@ isPalindrome('Aba')
      uses .padEnd() or .padStart() to make the string reach maxLength with '*'.
    - Log the padded string.
 */
+  console.log('Ex. 26');
+  function padString(str, maxLength) {
+    if (str.length < maxLength) {
+      const paddedStr = str.padEnd(maxLength, '*');
+      console.log(paddedStr);
+    } else {
+      console.log(str);
+    }
+  }
 
 /*
 27. If-Else: Voting Eligibility
@@ -308,6 +511,14 @@ isPalindrome('Aba')
      - "Can vote" if age >= 18
      - "Too young to vote" otherwise
 */
+  console.log('Ex. 27');
+  function canVote(age) {
+    if (age >= 18) {
+      console.log('Can vote');
+    } else {
+      console.log('Too young to vote');
+    }
+  }
 
 /*
 28. Reverse Words in a Sentence
@@ -317,6 +528,14 @@ isPalindrome('Aba')
      - Joins them back
    - Log the result.
 */
+  console.log('Ex. 28');
+  function reverseWords(sentence) {
+    const words = sentence.split(' ');
+    const reversedWords = words.map(word => {
+      return word.split('').reverse().join('');
+    }).join(' ');
+    console.log(reversedWords);
+  }
 
 /*
 29. Check Substring Position
@@ -324,6 +543,15 @@ isPalindrome('Aba')
      to find the starting index. If not found, return -1.
    - Log the index or log "Not found" if it's -1.
 */
+  console.log('Ex. 29');
+  function findWordPosition(sentence, word) {
+    const index = sentence.indexOf(word);
+    if (index === -1) {
+      console.log('Not found');
+    } else {
+      console.log(index);
+    }
+  }
 
 /*
 30. Switch: Simple Calculator
@@ -335,3 +563,22 @@ isPalindrome('Aba')
      - Otherwise -> "Invalid operator"
    - Log the result.
 */
+  console.log('Ex. 30');
+  function calculate(a, operator, b) {
+    switch (operator) {
+      case '+':
+        console.log(a + b);
+        break;
+      case '-':
+        console.log(a - b);
+        break;
+      case '*':
+        console.log(a * b);
+        break;
+      case '/':
+        console.log(a / b);
+        break;
+      default:
+        console.log('Invalid operator');
+    }
+  }
