@@ -45,3 +45,5 @@ export function QuoteCard({
     </Card>
   );
 }
+
+{/* I am just trying to fix commit&push problem. That's why i am writing tihs command in here. */}
