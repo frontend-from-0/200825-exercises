@@ -92,7 +92,7 @@ function incrementProduct(product) {
   totalPriceElement.textContent = totalPrice;
 }
 
-function decrementProduct(product) {
+function decrementQuantity(product) {
   if (products[product].quantity > 0) {
     products[product].quantity--;
 
