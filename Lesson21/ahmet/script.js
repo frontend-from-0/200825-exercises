@@ -39,7 +39,7 @@ expDateInput.addEventListener("blur", () =>
 cvvInput.addEventListener("blur", () => validateCvv(cvvInput, cvvError));
 
 function validateEmail() {
-  if (emailPattern.test(emailInput.value.trim)) {
+  if (emailPattern.test(emailInput.value.trim())) {
     emailError.innerText = "";
   } else {
     emailError.innerText =
