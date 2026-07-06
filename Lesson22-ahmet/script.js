@@ -102,6 +102,11 @@ function decrementProduct(product) {
       products[product].quantity;
 
     totalPriceElement.textContent = totalPrice;
+    
+    if (products[product].quantity === 0) {
+  document.getElementById(`${product}_cart`).classList.add("hidden");
+  }
+}
   }
 }
 
