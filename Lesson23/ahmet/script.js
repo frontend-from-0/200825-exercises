@@ -8,6 +8,7 @@ fetch("https://jsonplaceholder.typicode.com/posts")
       postDiv.classList.add("post");
 
       const title = document.createElement("h2");
+      title.classList.add("post-title");
       title.textContent = post.title;
 
       const body = document.createElement("p");
