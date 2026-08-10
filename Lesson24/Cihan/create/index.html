@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create User</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+    <h1>Create New User</h1>
+
+    <div class="container ctas">
+
+        
+
+        <form id="createUser">
+            <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+            <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+            <input type="number" id="age" name="age" placeholder="Age" required>
+            <button class="button button--success" type="submit">Create User</button>
+        </form>
+
+    </div>
+
+    <a class="button--back button" href="../index.html">← Back to Users</a>
+
+    <div class="container hidden" id="statusContainer">
+    <p id="status"></p>
+    
+     <button class="closeButton" id="closeButton">X</button>
+  </div>
+
+   <script src="./create.js"></script>
+</body>
+</html>
